@@ -25,7 +25,7 @@ call vundle#begin()
 
     "-------------------=== Code/Project navigation ===-------------
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
-"    Plugin 'majutsushi/tagbar'                  " Class/module browser
+    Plugin 'majutsushi/tagbar'                  " Class/module browser
     Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
 
     "-------------------=== Other ===-------------------------------
@@ -120,10 +120,18 @@ let g:mapleader = ","
 
 " " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>q :q<cr>
+
 "
 " " :W sudo saves the file 
 " " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fast editing and reloading of vimrc configs
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>e :e! ~/.vim/vimrc<cr>
+
 
 "=====================================================
 "" Tabs / Buffers settings
@@ -172,10 +180,11 @@ nnoremap <C-s-tab> :bp<CR>
 "" TagBar settings
 "=====================================================
 "let g:tagbar_autofocus=0
-"let g:tagbar_width=42
+let g:tagbar_width=42
+autocmd BufReadPost *.py call tagbar#autoopen()
 "autocmd BufEnter *.py :call tagbar#autoopen(0)
 "autocmd BufWinLeave *.py :TagbarClose
-"map <C-c> :TagbarToggle<CR>
+map <leader>b :TagbarToggle<CR>
 
 "=====================================================
 "" NERDTree settings
