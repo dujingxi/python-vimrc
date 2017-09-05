@@ -58,6 +58,7 @@ call vundle#begin()
     Plugin 'corntrace/bufexplorer'
     Plugin 'mileszs/ack.vim'
     Plugin 'terryma/vim-multiple-cursors'
+    Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()                           " required
 filetype on
@@ -126,6 +127,15 @@ nmap <leader>q :q<cr>
 " " :W sudo saves the file 
 " " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
+
+ "========== NERD Commenter =================                                                                                               
+139 "
+140 "===========================================
+141 let g:NERDSpaceDelims = 1
+142 let g:NERDCompactSexyComs = 1
+143 let g:NERDCommentEmptyLines = 1
+144 let g:NERDTrimTrailingWhitespace = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
