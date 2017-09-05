@@ -128,13 +128,13 @@ nmap <leader>q :q<cr>
 " " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
- "========== NERD Commenter =================                                                                                               
-139 "
-140 "===========================================
-141 let g:NERDSpaceDelims = 1
-142 let g:NERDCompactSexyComs = 1
-143 let g:NERDCommentEmptyLines = 1
-144 let g:NERDTrimTrailingWhitespace = 1
+"========== NERD Commenter =================                                                                                               
+"
+"===========================================
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
