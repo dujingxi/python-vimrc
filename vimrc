@@ -71,8 +71,8 @@ filetype plugin indent on
 syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
-set background=dark
-colorscheme wombat256mod                    " set color scheme
+"set background=dark
+"colorscheme wombat256mod                    " set color scheme
 "colorscheme solarized                      " set color scheme
 
 set number                                  " show line numbers
@@ -191,7 +191,7 @@ nnoremap <C-s-tab> :bp<CR>
 "=====================================================
 "let g:tagbar_autofocus=0
 let g:tagbar_width=42
-autocmd BufReadPost *.py call tagbar#autoopen()
+"autocmd BufReadPost *.py call tagbar#autoopen()
 "autocmd BufEnter *.py :call tagbar#autoopen(0)
 "autocmd BufWinLeave *.py :TagbarClose
 map <leader>b :TagbarToggle<CR>
